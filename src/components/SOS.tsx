@@ -67,7 +67,7 @@ export function SOS() {
                   <div className="font-medium text-sm text-foreground">{it.title}</div>
                   <div className="text-sm text-muted-foreground">{it.desc}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

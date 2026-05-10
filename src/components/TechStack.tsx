@@ -39,9 +39,15 @@ export function TechStack() {
           {[...stack, ...stack].map((s, i) => (
             <div
               key={i}
-              className="shrink-0 w-64 rounded-2xl border border-border bg-background p-6"
+              className="shrink-0 w-64 rounded-2xl border border-border bg-background p-6 transition-transform hover:-translate-y-1 hover:shadow-[var(--shadow-dashboard)]"
             >
-              <div className="font-display text-3xl text-foreground">{s.name}</div>
+              <div className="flex items-center justify-between">
+                <div className="font-display text-3xl text-foreground">{s.name}</div>
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                </span>
+              </div>
               <div className="mt-1 text-sm text-muted-foreground">{s.desc}</div>
             </div>
           ))}

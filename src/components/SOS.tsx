@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Siren, Phone, MapPin, ShieldCheck } from "lucide-react";
+import { LiveDot } from "@/components/LiveDot";
 
 const items = [
   { icon: Phone, title: "One-tap SOS", desc: "Instant call to nearest responders with citizen ID and live context." },

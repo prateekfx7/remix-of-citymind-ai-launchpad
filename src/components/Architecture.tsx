@@ -58,7 +58,7 @@ export function Architecture() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className={`relative md:w-1/2 ${i % 2 === 0 ? "md:pr-10" : "md:ml-auto md:pl-10"}`}
               >
-                <div className="rounded-2xl border border-border bg-secondary/40 p-6">
+                <div className="rounded-2xl border border-border bg-secondary/40 p-6 transition-all hover:bg-secondary hover:shadow-[var(--shadow-dashboard)] hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="h-10 w-10 rounded-xl bg-background border border-border flex items-center justify-center">
                       <l.icon className="h-5 w-5 text-foreground" />

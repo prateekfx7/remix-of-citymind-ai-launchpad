@@ -10,9 +10,15 @@ export function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.6 }}
-        className="max-w-5xl mx-auto rounded-3xl border border-border bg-primary text-primary-foreground p-12 md:p-20 text-center shadow-[var(--shadow-dashboard)]"
+        className="relative max-w-5xl mx-auto rounded-3xl border border-border bg-primary text-primary-foreground p-12 md:p-20 text-center shadow-[var(--shadow-dashboard)] overflow-hidden"
       >
-        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+        <motion.div
+          aria-hidden
+          animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.3, 0.15] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-accent blur-3xl"
+        />
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight relative">
           Ready to make your city <em className="italic">think</em>?
         </h2>
         <p className="mt-5 text-base md:text-lg opacity-80 max-w-[560px] mx-auto leading-relaxed">

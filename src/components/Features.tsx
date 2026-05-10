@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Car, Trash2, ParkingSquare, CloudSun, Zap, Bot } from "lucide-react";
+import { LiveDot } from "@/components/LiveDot";
 
 const features = [
   {
@@ -64,9 +65,11 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="rounded-2xl border border-border bg-secondary/40 p-6 hover:bg-secondary transition-colors"
+              whileHover={{ y: -4 }}
+              className="group relative rounded-2xl border border-border bg-secondary/40 p-6 hover:bg-secondary transition-colors"
             >
-              <div className="h-10 w-10 rounded-xl bg-background border border-border flex items-center justify-center mb-5">
+              <LiveDot label="Active" className="absolute top-4 right-4" />
+              <div className="h-10 w-10 rounded-xl bg-background border border-border flex items-center justify-center mb-5 transition-transform group-hover:scale-110 group-hover:rotate-3">
                 <f.icon className="h-5 w-5 text-foreground" />
               </div>
               <h3 className="font-display text-2xl text-foreground">{f.title}</h3>

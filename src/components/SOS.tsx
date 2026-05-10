@@ -37,17 +37,29 @@ export function SOS() {
           className="relative rounded-3xl border border-border bg-background p-8 shadow-[var(--shadow-dashboard)]"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="h-12 w-12 rounded-2xl bg-destructive/10 flex items-center justify-center">
+            <motion.div
+              animate={{ scale: [1, 1.08, 1] }}
+              transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+              className="h-12 w-12 rounded-2xl bg-destructive/10 flex items-center justify-center"
+            >
               <Siren className="h-6 w-6 text-destructive" />
-            </div>
-            <div>
+            </motion.div>
+            <div className="flex-1">
               <div className="text-sm text-muted-foreground">Emergency</div>
               <div className="font-display text-xl text-foreground">SOS Active</div>
             </div>
+            <LiveDot label="Online" />
           </div>
           <div className="space-y-4">
-            {items.map((it) => (
-              <div key={it.title} className="flex gap-4 items-start p-4 rounded-xl border border-border">
+            {items.map((it, idx) => (
+              <motion.div
+                key={it.title}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 + idx * 0.08 }}
+                className="flex gap-4 items-start p-4 rounded-xl border border-border hover:border-foreground/20 transition-colors"
+              >
                 <div className="h-9 w-9 rounded-lg bg-secondary flex items-center justify-center shrink-0">
                   <it.icon className="h-4 w-4 text-foreground" />
                 </div>

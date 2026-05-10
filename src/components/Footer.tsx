@@ -1,15 +1,30 @@
 const cols = [
   {
     title: "Product",
-    links: ["Features", "Architecture", "Tech Stack", "SOS"],
+    links: [
+      { label: "Features", href: "/features" },
+      { label: "Architecture", href: "/architecture" },
+      { label: "Tech Stack", href: "/tech-stack" },
+      { label: "SOS", href: "/sos" },
+    ],
   },
   {
     title: "Company",
-    links: ["About", "Careers", "Press", "Contact"],
+    links: [
+      { label: "About", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Press", href: "#" },
+      { label: "Contact", href: "#" },
+    ],
   },
   {
     title: "Resources",
-    links: ["Docs", "API", "Status", "Changelog"],
+    links: [
+      { label: "Docs", href: "#" },
+      { label: "API", href: "#" },
+      { label: "Status", href: "#" },
+      { label: "Changelog", href: "#" },
+    ],
   },
 ];
 
@@ -28,9 +43,9 @@ export function Footer() {
             <div className="text-sm font-medium text-foreground mb-4">{c.title}</div>
             <ul className="space-y-2">
               {c.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {l}
+                <li key={l.label}>
+                  <a href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    {l.label}
                   </a>
                 </li>
               ))}

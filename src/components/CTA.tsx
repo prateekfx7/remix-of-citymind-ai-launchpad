@@ -25,15 +25,19 @@ export function CTA() {
           Join thousands of citizens already using CityMind AI to navigate, report and live smarter every day.
         </p>
         <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
-          <Button className="rounded-full px-6 py-5 text-sm font-medium bg-background text-foreground hover:bg-background/90">
-            Explore app <ArrowRight className="ml-1 h-4 w-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            className="rounded-full px-6 py-5 text-sm font-medium border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-          >
-            Get started
-          </Button>
+          <a href="https://citymindai.base44.app/" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full px-6 py-5 text-sm font-medium bg-background text-foreground hover:bg-background/90">
+              Explore app <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </a>
+          <a href="https://citymindai.base44.app/" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="ghost"
+              className="rounded-full px-6 py-5 text-sm font-medium border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+            >
+              Get started
+            </Button>
+          </a>
         </div>
       </motion.div>
     </section>

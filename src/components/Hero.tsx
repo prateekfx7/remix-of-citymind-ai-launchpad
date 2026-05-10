@@ -54,15 +54,19 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-5 flex items-center gap-3"
         >
-          <Button className="rounded-full px-6 py-5 text-sm font-medium font-body bg-primary text-primary-foreground hover:bg-primary/90">
-            Explore app
-          </Button>
-          <Button
-            variant="ghost"
-            className="rounded-full px-5 py-5 text-sm font-medium font-body bg-background shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:bg-background/80"
-          >
-            Get started <ArrowRight className="ml-1 h-4 w-4" />
-          </Button>
+          <a href="https://citymindai.base44.app/" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full px-6 py-5 text-sm font-medium font-body bg-primary text-primary-foreground hover:bg-primary/90">
+              Explore app
+            </Button>
+          </a>
+          <a href="https://citymindai.base44.app/" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="ghost"
+              className="rounded-full px-5 py-5 text-sm font-medium font-body bg-background shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:bg-background/80"
+            >
+              Get started <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </a>
         </motion.div>
 
         <motion.div

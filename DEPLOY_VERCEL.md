@@ -8,10 +8,10 @@
 
 ## Build settings (already in `vercel.json`)
 - Install: `bun install`
-- Build: `bun run build`
+- Build: `bun run build:vercel`
 - Output: `dist/client`
 - Framework preset: Other
-- SPA fallback: all routes rewrite to `/index.html`
+- SPA fallback: all routes rewrite to TanStack Start's static shell (`/_shell.html`)
 
 ## Notes
 - This deploys as a **static SPA**. Client-side routing (TanStack Router) works on refresh thanks to the rewrite rule.

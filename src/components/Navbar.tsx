@@ -26,15 +26,11 @@ export function Navbar() {
           </Link>
         ))}
       </div>
-      <a
-        href="https://citymindai.base44.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button className="rounded-full px-5 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90">
+      <Button asChild className="rounded-full px-5 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90">
+        <Link to="/features">
           Get Started
-        </Button>
-      </a>
+        </Link>
+      </Button>
     </nav>
   );
 }
